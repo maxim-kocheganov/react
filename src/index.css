@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+h1{
+  
+  /*align-items: center;*/
+  text-align: center;
+}
+.card{
+  width: 200px;
+  border: 3px dotted #077c24;
+  margin: 5px;
+}
+.cardBig{
+  width: 400px;
+  border: 3px dotted #077c24;
+  margin: 5px;
+}
