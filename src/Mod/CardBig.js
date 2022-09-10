@@ -6,6 +6,6 @@ export default props => {
     style = {background: 'yellow'}
   return <div className='cardBig'>
     <h1 style={style}>{props.title}</h1>
-    <h4>{props.text}</h4>
+    <h4 className='centeredText'>{props.text}</h4>
   </div>
 }

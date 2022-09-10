@@ -15,6 +15,24 @@ h1{
 }
 .cardBig{
   width: 400px;
+  height: 443px;
   border: 3px dotted #077c24;
   margin: 5px;
+  margin-left: 0px;
+}
+.columns
+{
+  flex-direction: row;
+  display: flex;
+}
+.miniColumns
+{
+  flex-direction: row;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.centeredText
+{
+  text-align: center;
 }
