@@ -7,13 +7,17 @@ export default props => {
     style = {background: 'yellow'}
   return <div className='cardBig'>
     <Writings
-     num={props.num} style={style}
-      onIn={props.onIputTitle} enter={props.enter}
+      num={props.num} style={style}
+      onInputTitle={props.onInputTitle} 
+      onInputText={props.onInputText}
+      enter={props.enter}
+      onClickTitle={props.onClickTitle}
       onClickText={props.onClickText}
       onSave={props.onSave}
       onChangeHi={props.onHi}
-      onHi={props.onHi}
-      text={props.title} sz={1}></Writings>       
+      onHi={props.onHi} hi={props.hi}
+      title={props.title} 
+      text={props.text}></Writings>       
   </div>
 }
 // //<h1 style={style}>{props.title}</h1>

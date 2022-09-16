@@ -25,6 +25,13 @@ class App extends Component {
       })
     this.forceUpdate()
   }
+  onClickTitle(event, textType)
+  {
+    this.setState((prev) => {
+        prev.enter = true
+      })
+    this.forceUpdate()
+  }
   onClickText(event, textType)
   {
     this.setState((prev) => {
@@ -40,13 +47,24 @@ class App extends Component {
       })
     this.forceUpdate()
   }
+  onIputTitle(event, textType)
+  {
+    console.log("Hit")
+    let num = parseInt(event.target.dataset.num)
+    let val = event.target.value
+    
+    this.setState((prev) => {
+          prev.Card[num].title = val
+      })
+    this.forceUpdate()
+  }
   onIputText(event, textType)
   {
     let num = parseInt(event.target.dataset.num)
     let val = event.target.value
     
     this.setState((prev) => {
-          prev.Card[num].title = val
+          prev.Card[num].text = val
       })
     this.forceUpdate()
   }
@@ -60,8 +78,10 @@ class App extends Component {
     let sel = this.state.selected
     let card = this.state.Card[sel]
     let cardBig = <CardBig
-                    num={sel} onIputTitle={(event) => this.onIputText.call(this,event)} 
-                    onIputText={(event) => this.onIputText.call(this,event)}
+                    num={sel} 
+                    onInputTitle={(event) => this.onIputTitle.call(this,event)} 
+                    onInputText={(event) => this.onIputText.call(this,event)} 
+                    onClickTitle={(event) => this.onClickTitle.call(this,event)}
                     onClickText={(event) => this.onClickText.call(this,event)}
                     onSave={(event) => this.onSave.call(this,event)}                    
                     onHi={(event) => this.onHi.call(this,event)}

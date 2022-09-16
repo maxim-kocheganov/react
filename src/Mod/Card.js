@@ -1,5 +1,5 @@
 import React from 'react'
-import Writings from './Writings'
+//import Writings from './Writings'
 
 export default props => {
   let style = {}
